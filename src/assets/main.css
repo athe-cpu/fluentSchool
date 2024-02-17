@@ -1,0 +1,179 @@
+@import './base.css';
+
+#container{
+  display: flex;
+  flex-direction: column;
+  padding: 0;
+}
+#header{
+  background: #494646;
+
+}
+#language{
+  margin: 11px;
+  height: 24px;
+  position: relative;
+  font-weight: bold;
+  font-size: 17px;
+  left: 83px;
+  background: #494646;
+  color: #E4E4E4;
+  width: 84px;
+  font-family: Arial, sans-serif;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+}
+#language:hover {
+  background-color: #0056b3; /* Change background color on hover */
+}
+
+#language:active {
+  background-color: #003366; /* Change background color when clicked */
+}
+
+#bottoms{
+  height: 100px;
+  display: flex;
+  flex-direction: row;
+}
+h1 {
+  font-family: 'Secular One', sans-serif;
+  color: blue;
+  position: relative;
+  left: 10px;
+  font-weight: bold;
+  font-size: 25px;
+}
+#left{
+  margin: 10px;
+  position: relative;
+  left: 35px;
+  background: #D9D9D9;
+  font-size: large;
+  align-content: center;
+  width: 150px;
+}
+#right{
+  position: relative;
+  left: 30%;
+  margin: 30px;
+  width: 50%;
+}
+.regularBut{
+  background: white;
+  color: black;
+  width: fit-content;
+  font-family: 'Secular One', sans-serif;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  margin: 1%;
+  font-weight: bold;
+}
+.regularBut:hover{
+  background-color: #0056b3; /* Change background color on hover */
+}
+.regularBut:active{
+  background-color: #003366; /* Change background color when clicked */
+}
+
+.searchBox{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  /*background: #2c3e50;*/
+  position: relative;
+  left: 75%;
+  top: -85%;
+  width: fit-content;
+  align-items: center;
+}
+
+
+.lastBut{
+  align-items: center;
+  background: #7C8276;
+  color: white;
+  width: 100px;
+  font-family: 'Secular One', sans-serif;
+  border-radius: 4px;
+  height: 40px;
+  border: none;
+  cursor: pointer;
+}
+.lastBut2{
+  border: 2px solid #7C8276;
+  width: 150px;
+  font-family: 'Secular One', sans-serif;
+  height: 40px;
+  cursor: pointer;
+}
+.lastBut:hover{
+  background-color: #0056b3; /* Change background color on hover */
+}
+.lastBut:active{
+  background-color: #003366; /* Change background color when clicked */
+}
+
+#body{
+
+}
+img{
+  width: 100%;
+  height: 550px;
+}
+
+#centreText{
+  position: absolute;
+  background: #D9D9D9;
+  width: 40%;
+  height: 30%;
+  top: 40%;
+  left: 30%;
+
+}
+.cc{
+  font-family: 'Secular One', sans-serif;
+  font-weight: bold;
+  font-size: 53px;
+  color: blue;
+  position: relative;
+  left: 30%;
+  top: 10%;
+  width: 40%;
+  text-align: center;
+}
+
+header {
+  line-height: 1.5;
+}
+
+.logo {
+  display: block;
+  margin: 0 auto 2rem;
+}
+
+@media (min-width: 1024px) {
+  header {
+    display: flex;
+    place-items: center;
+    padding-right: calc(var(--section-gap) / 2);
+  }
+
+  .logo {
+    margin: 0 2rem 0 0;
+  }
+
+  header .wrapper {
+    display: flex;
+    place-items: flex-start;
+    flex-wrap: wrap;
+  }
+
+  .active {
+    background-color: #f0f0f0; /* Highlight color */
+  }
+
+
+}
