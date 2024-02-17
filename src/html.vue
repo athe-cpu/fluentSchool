@@ -26,7 +26,7 @@
         </div>
       </div>
       <div id="body">
-        <img src="src/assets/img.png">
+        <img src="/src/assets/img.png">
         <div v-if="activeButton === 'main'" id="centreText">
           <p class="cc">{{ headings.line }}</p>
         </div>
