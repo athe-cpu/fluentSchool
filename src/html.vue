@@ -7,28 +7,46 @@
   <main>
     <div id="container">
       <div id="header">
-        <button id="language" @click="toggleLanguage">{{ currentLanguage }}</button>
-      </div>
-      <div id="bottoms">
-        <div id="left">
-          <h1>{{ headings.line }}</h1>
-        </div>
-        <div id="right">
-          <button class="regularBut" @click="navigateTo('main')" :class="{ 'active': activeButton === 'main' }" :style="{ backgroundColor: activeButton === 'main' ? '#f0f0f0' : '' }">{{ buttons.main }}</button>
-          <button class="regularBut" @click="navigateTo('methodology')" :class="{ 'active': activeButton === 'methodology' }">{{ buttons.methodology }}</button>
-          <button class="regularBut" @click="navigateTo('who')" :class="{ 'active': activeButton === 'who' }">{{ buttons.who }}</button>
-          <button class="regularBut" @click="navigateTo('online')" :class="{ 'active': activeButton === 'online' }">{{ buttons.online }}</button>
-          <button class="regularBut" @click="navigateTo('profile')" :class="{ 'active': activeButton === 'profile' }">{{ buttons.profile }}</button>
-          <div class="searchBox">
-            <input class="lastBut2" type="text" v-model="searchKeyword" placeholder="Search...">
-            <button class="lastBut" @click="searchKeywords"><i style="font-size: 16px;" class="material-icons">{{ icons.search }}</i><p>{{ buttons.search }}</p></button>
-          </div>
+        <div class = language-block>
+          <button id="language" @click="toggleLanguage" :style="{ width: elementWidth + 'px' }">
+            {{ currentLanguage }}
+          </button>
+          <svg class = arrow-down viewBox="0 0 100 60" xmlns="http://www.w3.org/2000/svg" @click="toggleLanguage">
+            {{ currentLanguage }}
+            <polyline points="10,10 50,50 90,10" stroke="white" stroke-width="20" fill="none" stroke-linecap="square" />
+          </svg>
         </div>
       </div>
       <div id="body">
-        <img src="/src/assets/img.png">
-        <div v-if="activeButton === 'main'" id="centreText">
-          <p class="cc">{{ headings.line }}</p>
+        <div id="buttons">
+          <div id="left">
+            <h1 id="name">{{ headings.line }}</h1>
+          </div>
+          <div id="right">
+            <div class="box">
+            <button class="regularBut" @click="navigateTo('about')" :class="{ 'active': activeButton === 'about' }" :style="{ backgroundColor: activeButton === 'about' ? '#f0f0f0' : '' }">{{ buttons.about }}</button>
+            </div>
+            <div class="box">
+              <button class="regularBut" @click="navigateTo('courses')" :class="{ 'active': activeButton === 'courses' }">{{ buttons.courses }}</button>
+            </div>
+              <div class="box">
+              <button class="regularBut" @click="navigateTo('contact')" :class="{ 'active': activeButton === 'contact' }">{{ buttons.contact }}</button>
+              </div>
+            <div class="searchBox">
+              <!--            <input class="lastBut2" type="text" v-model="searchKeyword" placeholder="Search...">-->
+              <button class="searchBut" @click="searchKeywords">
+                <p id = "search">{{ buttons.search }}</p>
+                <i id="loop" class="material-icons">{{ icons.search }}</i>
+              </button>
+            </div>
+              </div>
+
+        </div>
+        <div>
+<!--          <img  src="/src/assets/img.png" alt="Failed to load image">-->
+          <div v-if="activeButton === 'main'" id="centreText">
+            <p  class="cc">{{ headings.line }}</p>
+        </div>
         </div>
       </div>
     </div>
@@ -41,17 +59,17 @@ import { activeButton, navigateTo } from './menu.js';
 
 const currentLanguage = ref('English');
 
+const elementWidth = ref(84);
+
 const headings = {
-  line: 'INSIGHT LINE',
+  line: 'FluentSchool',
 };
 
 const buttons = {
-  main: 'MAIN',
-  methodology: 'METHODOLOGY',
-  who: 'WHO WE ARE',
-  online: 'ONLINE',
-  profile: 'MY PROFILE',
-  search: 'SEARCH',
+  about: 'About',
+  courses: 'Courses',
+  contact: 'Contact us',
+  search: 'Search',
 };
 
 const icons = {
@@ -63,22 +81,18 @@ const searchKeyword = ref('');
 const toggleLanguage = () => {
   if (currentLanguage.value === 'English') {
     currentLanguage.value = 'Ukrainian';
-    // Update button texts accordingly
-    buttons.main = 'Головна';
-    buttons.methodology = 'Методологія';
-    buttons.who = 'Хто ми';
-    buttons.online = 'Онлайн';
-    buttons.profile = 'Мій профіль';
+    buttons.about = 'Про нас';
+    buttons.courses = 'Курси';
+    buttons.contact = 'Контакт';
     buttons.search = 'Пошук';
+    elementWidth.value = 100;
   } else {
     currentLanguage.value = 'English';
-    // Revert button texts back to English
-    buttons.main = 'MAIN';
-    buttons.methodology = 'METHODOLOGY';
-    buttons.who = 'WHO WE ARE';
-    buttons.online = 'ONLINE';
-    buttons.profile = 'MY PROFILE';
-    buttons.search = 'SEARCH';
+    buttons.about = 'About';
+    buttons.courses = 'Courses';
+    buttons.contact = 'Contact us';
+    buttons.search = 'Search';
+    elementWidth.value = 84;
   }
 };
 
