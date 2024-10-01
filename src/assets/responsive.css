@@ -1,0 +1,144 @@
+@media screen and (max-width: 1200px){
+    #right{
+        left: 47%;
+    }
+
+}
+@media screen and (max-width: 1100px){
+    #right{
+        left: 46%;
+    }
+}
+@media screen and (max-width: 1000px){
+    #right{
+        left: 44%;
+    }
+    .thirdSecBot {
+        width: 13vw;
+    }
+    .secondSecButton{
+        width: 30%;
+    }
+}
+@media screen and (max-width: 900px){
+    #right{
+        left: 42%;
+    }
+    .thirdSecBot {
+        width: 13vw;
+        font-size: 110%;
+    }
+    .secondSecButton{
+        width: 30%;
+    }
+}
+@media screen and (max-width: 800px){
+    #right{
+        left: 36%;
+    }
+    .thirdSecBot {
+        width: 13vw;
+        font-size: 110%;
+    }
+    .secondSecButton{
+        width: 30%;
+    }
+    .secondSecHeading {
+        font-size: 2.9vw;
+    }
+    .secondSecText {
+        font-size: 2.0vw;
+    }
+}
+@media screen and (max-width: 700px){
+    #right{
+        left: 27%;
+    }
+    .thirdSecBot {
+        width: 13vw;
+        font-size: 110%;
+    }
+    .secondSecButton {
+        width: 40%;
+    }
+    .firstSecHeading {
+        font-size: 2.8vw;
+    }
+    .firstSecText {
+        font-size: 1.9vw;
+    }
+    .secondSecHeading {
+        font-size: 2.9vw;
+    }
+    .secondSecText {
+        font-size: 2vw;
+    }
+}
+
+@media screen and (max-width: 600px){
+    #right{
+        left: 20%;
+    }
+    .switchBut {
+        height: 80%;
+        width: 150%;
+    }
+    .thirdSecBot {
+        width: 13vw;
+        font-size: 100%;
+    }
+    .secondSecButton{
+        width: 40%;
+    }
+    .firstSecHeading{
+        font-size: 2.8vw;
+    }
+    .firstSecText{
+        font-size: 2.4vw;
+    }
+}
+@media screen and (max-width: 510px) {
+    #right {
+        left: 12%;
+    }
+    .regularBut {
+        width: 9vw;
+    }
+    .arrow-right {
+        width: 30px;
+        height: 50%;
+    }
+    .arrow-left {
+        width: 30px;
+        height: 50%;
+    }
+    .cc {
+        font-size: 5vw;
+    }
+    .thirdSecBot {
+        width: 13vw;
+        font-size: 80%;
+    }
+    .secondSecButton{
+        width: 40%;
+    }
+}
+
+@media (min-width: 1024px) {
+    header {
+        display: flex;
+        place-items: center;
+        padding-right: calc(var(--section-gap) / 2);
+    }
+
+    .logo {
+        margin: 0 2rem 0 0;
+    }
+
+    header .wrapper {
+        display: flex;
+        place-items: flex-start;
+        flex-wrap: wrap;
+    }
+
+}
